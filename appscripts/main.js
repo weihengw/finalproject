@@ -517,7 +517,7 @@ require(
             mainInterval = setInterval(draw, 0); 
             mainEmit = setInterval(emit, 50);
             mainScore = setInterval(gameScore, 10);
-            mainFuel = setInterval(gameFuel, 3500);
+            mainFuel = setInterval(gameFuel, 5000);
             } else {
                 alert("Your spaceship is not ready for flight!\nPlease check your speed setting or amount of fuel available.")
             } 
