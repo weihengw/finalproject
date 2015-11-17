@@ -32,7 +32,7 @@ require(
         var difficultyLevel = 0
         var currentSpeed = paper.text(390, 85, difficultyLevel).attr({'font-size':'18px', "font-weight": "bold", "fill":"white"});
         currentSpeed.hide();
-        var fuelAmount = 0;
+        var fuelAmount = 50;
         var currentFuel = paper.text(215, 85, fuelAmount + "%").attr({'font-size':'18px', 'font-weight':'bold', 'fill':'white'});
         currentFuel.hide();
         var flyDistance = 0;
@@ -166,7 +166,7 @@ require(
             gameTries.attr({text: numberGame})
             lives=3
             lifenumber.attr({text: lives})
-            fuelAmount=0
+            fuelAmount=50
             currentFuel.attr({text: fuelAmount + "%"});
             flyDistance=0
             lastScore.attr({text: flyDistance})
@@ -516,8 +516,8 @@ require(
             spaceship.show();
             mainInterval = setInterval(draw, 0); 
             mainEmit = setInterval(emit, 50);
-            mainScore = setInterval(gameScore, 10)
-            mainFuel = setInterval(gameFuel, 2000)
+            mainScore = setInterval(gameScore, 10);
+            mainFuel = setInterval(gameFuel, 3500);
             } else {
                 alert("Your spaceship is not ready for flight!\nPlease check your speed setting or amount of fuel available.")
             } 
@@ -530,7 +530,7 @@ require(
             var fuelCreate = function(){
                 i = 0;
                 while (i<150){
-                    fuelsize = (randInt(40)+4)*4
+                    fuelsize = (randInt(60)+3)*4
                     fuelDot[i] = paper.image("images/fuelicon.png", randInt(1200), ((randInt(-50))-1)*200, fuelsize, fuelsize); // Specify the size and initial position of the dots
                     var color = "hsl(" + dotColor[i] + ", 0.5, 0.5)" // Creating a variable with a hsl string using the random number generated in dotColor for the hue value
                     fuelDot[i].show()
