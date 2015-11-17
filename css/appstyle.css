@@ -1,0 +1,28 @@
+html, body
+{
+  
+  height: 98%;
+  width: 98%;
+
+}
+
+body {
+    background-image: url("http://universe-beauty.com/albums/userpics/2011y/05/11/1/10/universe-hd-photo101-JPG.jpg");
+
+}
+
+
+h3 {color:white;
+  height: 15%;
+  user-select: none;
+  text-align: center;
+}
+
+
+#centerDiv {
+  border: 1px solid black;
+  width: 1131px;
+  height: 610px;
+  margin: auto;
+  background-color: black;
+}
